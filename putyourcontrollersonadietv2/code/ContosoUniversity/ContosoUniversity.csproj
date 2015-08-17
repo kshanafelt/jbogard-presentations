@@ -206,7 +206,10 @@
     <Compile Include="Features\Student\Delete\Delete.cs" />
     <Compile Include="Features\Student\Details\Details.cs" />
     <Compile Include="Features\Student\Edit\Edit.cs" />
-    <Compile Include="Features\Student\Index\Index.cs" />
+    <Compile Include="Features\Student\Index\QueryHandler.cs" />
+    <Compile Include="Features\Student\Index\Model.cs" />
+    <Compile Include="Features\Student\Index\Query.cs" />
+    <Compile Include="Features\Student\Index\Result.cs" />
     <Compile Include="Features\Student\MappingProfile.cs" />
     <Compile Include="Features\Student\StudentModel.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
