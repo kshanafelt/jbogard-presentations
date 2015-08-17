@@ -10,6 +10,8 @@
             {
                 "~/Features/{1}/{0}.cshtml",
                 "~/Features/{1}/{0}.vbhtml",
+                "~/Features/{1}/{0}/{0}.cshtml",
+                "~/Features/{1}/{0}/{0}.vbhtml",
                 "~/Features/Shared/{0}.cshtml",
                 "~/Features/Shared/{0}.vbhtml",
             };
@@ -20,6 +22,8 @@
             {
                 "~/Features/{1}/{0}.cshtml",
                 "~/Features/{1}/{0}.vbhtml",
+                "~/Features/{1}/{0}/{0}.cshtml",
+                "~/Features/{1}/{0}/{0}.vbhtml",
                 "~/Features/Shared/{0}.cshtml",
                 "~/Features/Shared/{0}.vbhtml",
             };

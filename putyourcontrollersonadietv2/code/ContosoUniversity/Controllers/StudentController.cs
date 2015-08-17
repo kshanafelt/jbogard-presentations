@@ -5,7 +5,11 @@
     using System.Web.Mvc;
     using Infrastructure;
     using MediatR;
-    using Features.Student;
+    using Index = Features.Student.Index;
+    using Details = Features.Student.Details;
+    using Create = Features.Student.Create;
+    using Edit = Features.Student.Edit;
+    using Delete = Features.Student.Delete;
 
     public class StudentController : Controller
     {

@@ -29,13 +29,8 @@ namespace ContosoUniversity.DependencyResolution {
     /// The structure map dependency scope.
     /// </summary>
     public class StructureMapDependencyScope : ServiceLocatorImplBase {
-        #region Constants and Fields
 
         private const string NestedContainerKey = "Nested.Container.Key";
-
-        #endregion
-
-        #region Constructors and Destructors
 
         public StructureMapDependencyScope(IContainer container) {
             if (container == null) {
@@ -43,10 +38,6 @@ namespace ContosoUniversity.DependencyResolution {
             }
             Container = container;
         }
-
-        #endregion
-
-        #region Public Properties
 
         public IContainer Container { get; set; }
 
@@ -59,20 +50,12 @@ namespace ContosoUniversity.DependencyResolution {
             }
         }
 
-        #endregion
-
-        #region Properties
-
         private HttpContextBase HttpContext {
             get {
                 var ctx = Container.TryGetInstance<HttpContextBase>();
                 return ctx ?? new HttpContextWrapper(System.Web.HttpContext.Current);
             }
         }
-
-        #endregion
-
-        #region Public Methods and Operators
 
         public void CreateNestedContainer() {
             if (CurrentNestedContainer != null) {
@@ -97,10 +80,6 @@ namespace ContosoUniversity.DependencyResolution {
             return DoGetAllInstances(serviceType);
         }
 
-        #endregion
-
-        #region Methods
-
         protected override IEnumerable<object> DoGetAllInstances(Type serviceType) {
             return (CurrentNestedContainer ?? Container).GetAllInstances(serviceType).Cast<object>();
         }
@@ -116,7 +95,5 @@ namespace ContosoUniversity.DependencyResolution {
 
             return container.GetInstance(serviceType, key);
         }
-
-        #endregion
     }
 }

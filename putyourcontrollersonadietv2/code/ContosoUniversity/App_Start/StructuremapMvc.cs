@@ -32,13 +32,9 @@ namespace ContosoUniversity.App_Start {
 	using StructureMap;
     
 	public static class StructuremapMvc {
-        #region Public Properties
 
         public static StructureMapDependencyScope StructureMapDependencyScope { get; set; }
 
-        #endregion
-		
-		#region Public Methods and Operators
 		
 		public static void End() {
             StructureMapDependencyScope.Dispose();
@@ -51,7 +47,5 @@ namespace ContosoUniversity.App_Start {
             DynamicModuleUtility.RegisterModule(typeof(StructureMapScopeModule));
             AutoMapperBootstrapper.Initialize(container);
         }
-
-        #endregion
     }
 }

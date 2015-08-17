@@ -6,7 +6,6 @@ namespace ContosoUniversity.DependencyResolution {
     using StructureMap.Web.Pipeline;
 
     public class StructureMapScopeModule : IHttpModule {
-        #region Public Methods and Operators
 
         public void Dispose() {
         }
@@ -18,7 +17,5 @@ namespace ContosoUniversity.DependencyResolution {
                 StructuremapMvc.StructureMapDependencyScope.DisposeNestedContainer();
             };
         }
-
-        #endregion
     }
 }

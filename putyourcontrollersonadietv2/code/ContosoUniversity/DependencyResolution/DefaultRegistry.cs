@@ -24,7 +24,6 @@ namespace ContosoUniversity.DependencyResolution {
     using StructureMap.Pipeline;
 
     public class DefaultRegistry : Registry {
-        #region Constructors and Destructors
 
         public DefaultRegistry()
         {
@@ -46,7 +45,5 @@ namespace ContosoUniversity.DependencyResolution {
             For<SingleInstanceFactory>().Use<SingleInstanceFactory>(ctx => t => ctx.GetInstance(t));
             For<MultiInstanceFactory>().Use<MultiInstanceFactory>(ctx => t => ctx.GetAllInstances(t));
         }
-
-        #endregion
     }
 }

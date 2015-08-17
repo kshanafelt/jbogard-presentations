@@ -20,7 +20,6 @@ namespace ContosoUniversity.DependencyResolution {
     using StructureMap.Graph;
 	
     public class DefaultRegistry : Registry {
-        #region Constructors and Destructors
 
         public DefaultRegistry() {
             Scan(
@@ -31,7 +30,5 @@ namespace ContosoUniversity.DependencyResolution {
                 });
             //For<IExample>().Use<Example>();
         }
-
-        #endregion
     }
 }
