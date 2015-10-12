@@ -1,3 +1,0 @@
-namespace CodeCampServerLite.Infrastructure.DataAccess
-{
-}
